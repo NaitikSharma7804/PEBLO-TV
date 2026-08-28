@@ -17,7 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Peblo TV Mini API", version="1.0")
 
-# --- ADD THIS CORS CONFIGURATION ---
+# --- ADD THIS CORS CONFIGURATION -
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins for local testing/development
