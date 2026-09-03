@@ -38,7 +38,7 @@ def get_db():
 def health_check():
     return {"status": "healthy", "service": "peblo-tv-backend"}
 
-# --- ARTWORK UPLOAD & SHOW/EPISODE CRUD -
+# --- ARTWORK UPLOAD & SHOW/EPISODE CRUD 
 
 @app.post("/admin/artwork/upload")
 def upload_artwork(
