@@ -8,3 +8,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 ### Added
 - Baseline directory layout for backend and frontend packages.
 - Defined artwork validation requirements (2:3, 16:9 aspect ratios).
+- Added role-based access control guidelines for editor and admin roles.
