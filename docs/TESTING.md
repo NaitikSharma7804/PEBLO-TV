@@ -18,3 +18,9 @@ Upload an image exceeding 200 KB to verify rejection:
 ```bash
 curl -X POST http://localhost:8000/admin/artwork/upload -F 'file=@large_image.jpg'
 ```
+
+## Catalogue Search Endpoint Testing
+Verify compound filtering across query string, section, and language:
+```bash
+curl 'http://localhost:8000/catalog/search?q=adventure&language=en'
+```
