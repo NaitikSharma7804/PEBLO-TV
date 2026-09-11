@@ -9,3 +9,6 @@ Peblo TV is designed for deployment across containerized environments (Docker, K
 
 ## Volume Persistence
 Persistent storage volume `uploads` must be mounted across container restarts for local storage mode.
+
+## Reverse Proxy Configuration
+In production, Nginx or Cloudflare should terminate TLS and serve static media directly.
