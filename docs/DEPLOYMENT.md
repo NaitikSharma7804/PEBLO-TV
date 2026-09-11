@@ -6,3 +6,6 @@ Peblo TV is designed for deployment across containerized environments (Docker, K
 ## Environment Configuration
 - `DATABASE_URL`: Connection string for PostgreSQL (defaults to SQLite locally).
 - `TIMESTAMP`: Optional build timestamp injected into the static catalogue payload.
+
+## Volume Persistence
+Persistent storage volume `uploads` must be mounted across container restarts for local storage mode.
