@@ -11,3 +11,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Added role-based access control guidelines for editor and admin roles.
 - Added comprehensive testing procedures and curl verification recipes.
 - Documented infrastructure, environment variables, and Docker deployment guidelines.
+- Documented Architectural Decision Records (ADR 001, ADR 002).
