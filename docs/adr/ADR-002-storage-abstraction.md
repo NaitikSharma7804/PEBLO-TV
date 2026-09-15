@@ -8,3 +8,6 @@ Media storage needs to support local development environments as well as cloud o
 
 ## Decision
 Define a base abstract class `StorageService` implemented by `LocalStorageService`, with future extension for `R2StorageService`.
+
+## Consequences
+Allows seamless swapping of cloud providers via dependency injection without refactoring controller routes.
