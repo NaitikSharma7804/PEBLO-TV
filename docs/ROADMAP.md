@@ -10,3 +10,4 @@
 
 ## Phase 3: Search Engine Integration
 - Integrate embedded search engine (Meilisearch or Typesense) during catalog publishing pipeline.
+- Support fuzzy typo tolerance and weighted attribute queries.
