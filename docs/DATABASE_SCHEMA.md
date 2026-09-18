@@ -50,3 +50,8 @@ This document describes the relational database structure, model entities, and c
 ### Publish Runs (`publish_runs`)
 - Audit log of catalogue publications.
 - Records `triggered_by`, execution `status`, show/episode counts, and timestamps.
+
+## Cascade Delete Strategy
+- `shows` -> `seasons` (`cascade='all, delete-orphan'`)
+- `seasons` -> `episodes` (`cascade='all, delete-orphan'`)
+- `shows`/`episodes` -> `artworks` (`ondelete='CASCADE'`)
