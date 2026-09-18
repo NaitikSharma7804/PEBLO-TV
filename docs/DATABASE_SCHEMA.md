@@ -55,3 +55,7 @@ This document describes the relational database structure, model entities, and c
 - `shows` -> `seasons` (`cascade='all, delete-orphan'`)
 - `seasons` -> `episodes` (`cascade='all, delete-orphan'`)
 - `shows`/`episodes` -> `artworks` (`ondelete='CASCADE'`)
+
+## Indexing Details
+- B-tree indices on `shows.title`, `shows.section`, `shows.category`, `shows.status`.
+- Composite unique index on `(content_group, language)`.
