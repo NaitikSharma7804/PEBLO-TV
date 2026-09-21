@@ -65,3 +65,11 @@ All admin endpoints accept an `X-User-Role` header (`editor` or `admin`).
 - **Method**: `POST /admin/catalog/publish`
 - **Headers**: `X-User-Role: admin` (restricted to admin role)
 - **Description**: Compiles approved content and atomically replaces `catalogue.json`.
+
+## Error Response Structure
+All standard validation errors return a standard JSON envelope:
+```json
+{
+  'detail': 'Detailed human-readable error description.'
+}
+```
