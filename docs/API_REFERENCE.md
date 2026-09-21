@@ -73,3 +73,10 @@ All standard validation errors return a standard JSON envelope:
   'detail': 'Detailed human-readable error description.'
 }
 ```
+
+## HTTP Status Codes
+- `200 OK`: Successful retrieval or mutation.
+- `400 Bad Request`: Validation failure (aspect ratio, file size, missing fields).
+- `401 Unauthorized`: Missing or invalid user role header.
+- `403 Forbidden`: Admin privileges required.
+- `404 Not Found`: Catalog or resource not found.
