@@ -80,3 +80,6 @@ All standard validation errors return a standard JSON envelope:
 - `401 Unauthorized`: Missing or invalid user role header.
 - `403 Forbidden`: Admin privileges required.
 - `404 Not Found`: Catalog or resource not found.
+
+## Rate Limiting (Production)
+Admin publishing is throttled to a maximum of 10 requests per minute to prevent concurrent build thrashing.
