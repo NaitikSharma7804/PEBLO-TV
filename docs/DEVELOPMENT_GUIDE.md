@@ -58,3 +58,10 @@ docker-compose up --build
 - **Frontend**: http://localhost:5173
 - **Backend API**: http://localhost:8000
 - **Database**: `localhost:5432` (`peblo` database)
+
+## Database Reset & Seeding
+To clear and recreate local SQLite database tables:
+```bash
+rm peblo.db
+python -c 'from app.database import engine, Base; from app.models import *; Base.metadata.create_all(bind=engine)'
+```
