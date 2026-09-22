@@ -15,3 +15,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Finalized ADR 003 and expanded roadmap with Phases 3 and 4.
 - Documented indexing and cascade deletion rules in database schema reference.
 - Added error response formats and HTTP status codes to API reference.
+- Added database reset and seed scripts to development guide.
