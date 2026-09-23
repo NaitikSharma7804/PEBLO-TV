@@ -43,3 +43,6 @@ im = Image.new('RGB', (600, 900), color='blue')
 buf = io.BytesIO()
 im.save(buf, format='JPEG')
 ```
+
+## Testing Atomic Publishing Concurrency
+Run parallel curl requests to ensure reader processes never hit partial file reads during publishing.
