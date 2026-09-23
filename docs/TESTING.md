@@ -27,3 +27,9 @@ curl 'http://localhost:8000/catalog/search?q=adventure&language=en'
 
 ## Validation Report Endpoint Testing
 Call `GET /admin/validation-report` with `X-User-Role: editor` to inspect blocking issues.
+
+## Automated Smoke Tests
+Run smoke test suite against running server:
+```bash
+python -m unittest discover tests
+```
