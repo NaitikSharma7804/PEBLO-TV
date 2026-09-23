@@ -46,3 +46,6 @@ im.save(buf, format='JPEG')
 
 ## Testing Atomic Publishing Concurrency
 Run parallel curl requests to ensure reader processes never hit partial file reads during publishing.
+
+## Frontend Contract Verification
+Verify that JSON structure emitted by `/catalog` exactly matches the TypeScript schema expected in the viewer UI.
