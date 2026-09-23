@@ -16,3 +16,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Documented indexing and cascade deletion rules in database schema reference.
 - Added error response formats and HTTP status codes to API reference.
 - Added database reset and seed scripts to development guide.
+- Added unit test mocking guides and frontend contract verification notes.
