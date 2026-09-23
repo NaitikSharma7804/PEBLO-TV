@@ -33,3 +33,13 @@ Run smoke test suite against running server:
 ```bash
 python -m unittest discover tests
 ```
+
+## Mocking Image Payloads
+Generate minimal JPEG bytes for testing using PIL:
+```python
+from PIL import Image
+import io
+im = Image.new('RGB', (600, 900), color='blue')
+buf = io.BytesIO()
+im.save(buf, format='JPEG')
+```
