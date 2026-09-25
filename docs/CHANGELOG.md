@@ -17,3 +17,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Added error response formats and HTTP status codes to API reference.
 - Added database reset and seed scripts to development guide.
 - Added unit test mocking guides and frontend contract verification notes.
+- Added adaptive bitrate video transcoding milestone to roadmap.
