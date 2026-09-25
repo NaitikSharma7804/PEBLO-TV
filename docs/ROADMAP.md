@@ -17,3 +17,4 @@
 
 ## Phase 5: HLS / DASH Video Transcoding
 - Automated packaging of source MP4 files into multi-bitrate HLS adaptive streaming playlists.
+- Integration with AWS MediaConvert or FFmpeg background worker queues.
