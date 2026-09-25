@@ -14,3 +14,6 @@
 
 ## Phase 4: Edge CDN & Caching
 - Distribute `catalogue.json` across Cloudflare CDN nodes with cache tags and instant invalidation.
+
+## Phase 5: HLS / DASH Video Transcoding
+- Automated packaging of source MP4 files into multi-bitrate HLS adaptive streaming playlists.
