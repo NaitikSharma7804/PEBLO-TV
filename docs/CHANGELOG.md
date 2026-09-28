@@ -18,3 +18,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Added database reset and seed scripts to development guide.
 - Added unit test mocking guides and frontend contract verification notes.
 - Added adaptive bitrate video transcoding milestone to roadmap.
+- Documented artwork types and section taxonomies in domain glossary.
