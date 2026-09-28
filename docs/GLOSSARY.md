@@ -11,3 +11,9 @@
 - **Poster**: Vertical show thumbnail with 2:3 aspect ratio (target 600x900).
 - **Banner**: Wide horizontal hero graphic with 16:9 aspect ratio (target 1280x720).
 - **Thumbnail**: Compact landscape preview with 16:9 aspect ratio (target 640x360).
+
+## Sections
+- `featured`: Curated hero carousel content.
+- `series`: Multi-season narrative series.
+- `minisodes`: Short-form episodic video.
+- `songs`: Dedicated audio-visual track listings.
