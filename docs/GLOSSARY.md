@@ -17,3 +17,7 @@
 - `series`: Multi-season narrative series.
 - `minisodes`: Short-form episodic video.
 - `songs`: Dedicated audio-visual track listings.
+
+## Publication Status
+- `draft`: Work-in-progress content visible only in admin CMS.
+- `published`: Approved content included in static catalog compilation.
