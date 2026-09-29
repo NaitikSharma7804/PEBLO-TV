@@ -49,3 +49,6 @@ for ep in season.episodes:
     group_map[ep.content_group]['languages'].append({ 'language': ep.language, 'video_url': ep.video_url })
 ```
 - Eliminates duplicate cards on viewer UI across different audio and subtitle language tracks.
+
+## Trailer Filtering (Season 0)
+Season 0 entries are intentionally isolated and excluded from browse rows so promotional material does not clutter standard episodic lists.
