@@ -36,3 +36,15 @@ The platform decouples viewer traffic from database load through an atomic stati
 
 - **Guarantees**: Write operations never expose partial files; if an interrupted write occurs, the temporary file is ignored and the live catalog stays intact.
 - **Performance**: Static JSON serving yields sub-millisecond responses without querying the primary database.
+
+## Content Group Collapsing Algorithm
+
+When publishing, episodes with identical `content_group` identifiers collapse into a single presentation item:
+
+```python
+# Pseudo-code logic:
+for ep in season.episodes:
+    if ep.content_group not in group_map:
+        group_map[ep.content_group] = { ...ep, 'languages': [] }
+    group_map[ep.content_group]['languages'].append({ 'language': ep.language, 'video_url': ep.video_url })
+```
