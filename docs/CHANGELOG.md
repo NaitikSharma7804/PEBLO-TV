@@ -19,3 +19,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Added unit test mocking guides and frontend contract verification notes.
 - Added adaptive bitrate video transcoding milestone to roadmap.
 - Documented artwork types and section taxonomies in domain glossary.
+- Added content collapsing algorithm, trailer filtering, and complexity analysis to architecture guide.
