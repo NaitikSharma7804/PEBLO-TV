@@ -48,3 +48,4 @@ for ep in season.episodes:
         group_map[ep.content_group] = { ...ep, 'languages': [] }
     group_map[ep.content_group]['languages'].append({ 'language': ep.language, 'video_url': ep.video_url })
 ```
+- Eliminates duplicate cards on viewer UI across different audio and subtitle language tracks.
