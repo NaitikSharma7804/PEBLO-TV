@@ -52,3 +52,6 @@ for ep in season.episodes:
 
 ## Trailer Filtering (Season 0)
 Season 0 entries are intentionally isolated and excluded from browse rows so promotional material does not clutter standard episodic lists.
+
+## Search Query Complexity
+In-memory search parses pre-published JSON in O(N) linear time, suitable for up to 10,000 items with near-zero latency.
