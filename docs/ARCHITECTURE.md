@@ -55,3 +55,7 @@ Season 0 entries are intentionally isolated and excluded from browse rows so pro
 
 ## Search Query Complexity
 In-memory search parses pre-published JSON in O(N) linear time, suitable for up to 10,000 items with near-zero latency.
+
+## Scalability Thresholds
+- Database reads during steady-state browsing: 0 queries/sec.
+- Memory consumption per worker: Under 64 MB under standard catalog payloads.
