@@ -20,3 +20,9 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Added adaptive bitrate video transcoding milestone to roadmap.
 - Documented artwork types and section taxonomies in domain glossary.
 - Added content collapsing algorithm, trailer filtering, and complexity analysis to architecture guide.
+
+## [v1.0.0] - 2026-09-30
+### Completed
+- Complete transactional backend with FastAPI and SQLAlchemy.
+- Atomic static publishing mechanism for zero database streaming browse.
+- Comprehensive developer and architectural documentation suite.
