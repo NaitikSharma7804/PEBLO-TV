@@ -1,0 +1,18 @@
+# Peblo TV Architecture Overview
+
+This document describes the high-level architecture of the Peblo TV platform, outlining the interaction between the transactional CMS, database, storage layers, and static publishing pipeline.
+
+## System Components
+
+1. **Transactional CMS Backend (FastAPI)**:
+   - Exposes RESTful endpoints for editors and administrators.
+   - Handles authentication, metadata CRUD (shows, seasons, episodes), and image file uploads.
+   - Enforces business validation rules prior to publishing.
+
+2. **Relational Database (SQLAlchemy / PostgreSQL / SQLite)**:
+   - Persists all relational entities including Shows, Seasons, Episodes, Artworks, and PublishRuns.
+   - Uses strict cascade rules and unique constraints to ensure referential integrity.
+
+3. **Storage Layer**:
+   - Manages media assets (posters, banners, thumbnails).
+   - Designed around a pluggable `StorageService` interface allowing local disk or Cloudflare R2 / S3 storage.
