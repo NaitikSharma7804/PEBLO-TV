@@ -16,3 +16,23 @@ This document describes the high-level architecture of the Peblo TV platform, ou
 3. **Storage Layer**:
    - Manages media assets (posters, banners, thumbnails).
    - Designed around a pluggable `StorageService` interface allowing local disk or Cloudflare R2 / S3 storage.
+
+## Atomic Static Publishing Workflow
+
+The platform decouples viewer traffic from database load through an atomic static publishing mechanism:
+
+```
+[CMS Editor] -> [Admin API /publish] -> [Compile JSON in Memory]
+                                                   |
+                                                   v
+                                        [Write catalogue.json.tmp]
+                                                   |
+                                                   v (os.replace)
+                                        [Live catalogue.json]
+                                                   |
+                                                   v
+                                        [Viewer Client / Search]
+```
+
+- **Guarantees**: Write operations never expose partial files; if an interrupted write occurs, the temporary file is ignored and the live catalog stays intact.
+- **Performance**: Static JSON serving yields sub-millisecond responses without querying the primary database.
