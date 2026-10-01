@@ -65,3 +65,8 @@ To clear and recreate local SQLite database tables:
 rm peblo.db
 python -c 'from app.database import engine, Base; from app.models import *; Base.metadata.create_all(bind=engine)'
 ```
+
+## Quick Health Check with Python
+```bash
+python -c "import urllib.request; print(urllib.request.urlopen('http://localhost:8000/health').read().decode())"
+```
