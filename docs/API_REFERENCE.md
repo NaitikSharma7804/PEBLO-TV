@@ -38,3 +38,30 @@ This document provides a reference for the RESTful endpoints available in the Pe
   - `category` (string, optional): Filter by category.
   - `language` (string, optional): Filter by audio/subtitle language.
   - `section` (string, optional): Filter by browse section (`featured`, `series`, `minisodes`, `songs`).
+
+## Admin & CMS Endpoints
+
+All admin endpoints accept an `X-User-Role` header (`editor` or `admin`).
+
+### 4. Artwork Upload
+- **Method**: `POST /admin/artwork/upload`
+- **Headers**: `X-User-Role: editor` or `admin`
+- **Form Parameters**:
+  - `artwork_type` (`poster` | `banner` | `thumbnail`)
+  - `file` (multipart file)
+  - `show_id` (optional integer)
+  - `episode_id` (optional integer)
+- **Validation**:
+  - `poster`: Aspect ratio 2:3, Target 600x900, Max 200 KB
+  - `banner`: Aspect ratio 16:9, Target 1280x720, Max 200 KB
+  - `thumbnail`: Aspect ratio 16:9, Target 640x360, Max 200 KB
+
+### 5. Validation Report
+- **Method**: `GET /admin/validation-report`
+- **Headers**: `X-User-Role: editor` or `admin`
+- **Description**: Identifies missing metadata or artwork blockers preventing publishing.
+
+### 6. Publish Catalogue
+- **Method**: `POST /admin/catalog/publish`
+- **Headers**: `X-User-Role: admin` (restricted to admin role)
+- **Description**: Compiles approved content and atomically replaces `catalogue.json`.
