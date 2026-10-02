@@ -49,3 +49,6 @@ Run parallel curl requests to ensure reader processes never hit partial file rea
 
 ## Frontend Contract Verification
 Verify that JSON structure emitted by `/catalog` exactly matches the TypeScript schema expected in the viewer UI.
+
+## Testing Role Header Constraints
+Verify that omitting `X-User-Role` returns 401 Unauthorized for admin upload routes.
