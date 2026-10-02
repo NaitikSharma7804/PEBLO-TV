@@ -26,3 +26,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Complete transactional backend with FastAPI and SQLAlchemy.
 - Atomic static publishing mechanism for zero database streaming browse.
 - Comprehensive developer and architectural documentation suite.
+- Added role header test cases and automated health check scripts.
