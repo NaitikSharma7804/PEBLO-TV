@@ -87,3 +87,4 @@ Admin publishing is throttled to a maximum of 10 requests per minute to prevent 
 ## JSON Payload Schemas
 Detailed schema definitions for request bodies and query parameters.
 - Shows payload includes `id`, `title`, `synopsis`, `section`, `category`, and `status`.
+- Episodes payload includes `id`, `title`, `duration_seconds`, `language`, and `video_url`.
