@@ -83,3 +83,6 @@ All standard validation errors return a standard JSON envelope:
 
 ## Rate Limiting (Production)
 Admin publishing is throttled to a maximum of 10 requests per minute to prevent concurrent build thrashing.
+
+## JSON Payload Schemas
+Detailed schema definitions for request bodies and query parameters.
