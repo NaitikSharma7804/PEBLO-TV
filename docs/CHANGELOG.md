@@ -27,3 +27,4 @@ All notable changes to the Peblo TV platform are documented in this file.
 - Atomic static publishing mechanism for zero database streaming browse.
 - Comprehensive developer and architectural documentation suite.
 - Added role header test cases and automated health check scripts.
+- Documented JSON payload schemas across shows and episodes in API reference.
