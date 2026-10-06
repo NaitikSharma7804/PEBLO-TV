@@ -33,3 +33,28 @@ This guide walks through setting up the Peblo TV development environment, testin
    ```bash
    curl http://localhost:8000/health
    ```
+
+## Frontend Setup
+
+1. **Navigate to Frontend Directory**:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+2. **Run Vite Dev Server**:
+   ```bash
+   npm run dev
+   ```
+
+## Docker Compose Deployment
+
+To spin up all services (PostgreSQL, FastAPI Backend, and Vite Frontend) in containers:
+
+```bash
+docker-compose up --build
+```
+
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:8000
+- **Database**: `localhost:5432` (`peblo` database)
