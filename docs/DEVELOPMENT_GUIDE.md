@@ -70,3 +70,6 @@ python -c 'from app.database import engine, Base; from app.models import *; Base
 ```bash
 python -c "import urllib.request; print(urllib.request.urlopen('http://localhost:8000/health').read().decode())"
 ```
+
+## Troubleshooting Port Conflicts
+If port 8000 or 5173 is occupied, specify `--port` flag during uvicorn or vite startup.
