@@ -18,3 +18,6 @@ Thank you for contributing to Peblo TV! This document outlines coding standards 
 1. Create a feature branch: `git checkout -b feature/your-feature-name`
 2. Keep commits atomic and clearly described.
 3. Submit a pull request with a descriptive summary of your changes.
+
+## Commit Message Guidelines
+Follow Conventional Commits conventions: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`.
