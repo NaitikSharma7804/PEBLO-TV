@@ -21,3 +21,7 @@ Thank you for contributing to Peblo TV! This document outlines coding standards 
 
 ## Commit Message Guidelines
 Follow Conventional Commits conventions: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`.
+
+## Code Review Checklist
+- Ensure no lint or syntax warnings are present.
+- Verify all new endpoints have matching documentation.
