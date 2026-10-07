@@ -15,6 +15,14 @@
    npm run dev
    ```
 
+## Documentation
+
+- [Architecture Overview](docs/ARCHITECTURE.md) - System components, data flows, and atomic static publishing mechanism.
+- [API Reference](docs/API_REFERENCE.md) - Viewer catalogue endpoints and administrator/CMS operations.
+- [Database Schema Guide](docs/DATABASE_SCHEMA.md) - Entity relationship models, constraints, and audit logs.
+- [Development & Deployment Guide](docs/DEVELOPMENT_GUIDE.md) - Local setup, environment configuration, and Docker Compose instructions.
+- [Contributing Guidelines](CONTRIBUTING.md) - Code standards and pull request workflows.
+
 ## Architecture & Implementation Notes
 
 ### 1. Atomic Publishing
