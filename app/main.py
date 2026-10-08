@@ -26,8 +26,9 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers (including X-User-Role)
 )
 storage = LocalStorageService()
-# comment
+# Database session dependency
 def get_db():
+    """Yields a scoped database session per request and guarantees proper closure."""
     db = SessionLocal()
     try:
         yield db
@@ -36,6 +37,7 @@ def get_db():
 
 @app.get("/health")
 def health_check():
+    """Health check endpoint to verify service availability."""
     return {"status": "healthy", "service": "peblo-tv-backend"}
 
 # --- ARTWORK UPLOAD & SHOW/EPISODE CRUD 
