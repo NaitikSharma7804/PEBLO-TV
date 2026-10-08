@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # PostgreSQL Database Service
   db:
     image: postgres:15-alpine
     environment:
@@ -12,6 +13,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  # FastAPI Backend API Service
   backend:
     build: .
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000
@@ -22,6 +24,7 @@ services:
     depends_on:
       - db
 
+  # React / Vite Frontend Application
   frontend:
     build:
       context: ./frontend
@@ -30,5 +33,6 @@ services:
     depends_on:
       - backend
 
+# Persistent Data Storage Volumes
 volumes:
   pgdata:
