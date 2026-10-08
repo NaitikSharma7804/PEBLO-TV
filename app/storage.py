@@ -1,9 +1,15 @@
+"""
+Storage service abstraction and artwork validation logic.
+Supports local filesystem storage and image specification verification.
+"""
+
 import os
 from fastapi import HTTPException
 from PIL import Image
 import io
 
 class StorageService:
+    """Abstract interface defining file persistence operations."""
     def save_file(self, file_bytes: bytes, filename: str) -> str:
         raise NotImplementedError
         
@@ -11,6 +17,7 @@ class StorageService:
         raise NotImplementedError
 
 class LocalStorageService(StorageService):
+    """Local disk implementation of StorageService."""
     def __init__(self, upload_dir: str = "uploads"):
         self.upload_dir = upload_dir
         os.makedirs(self.upload_dir, exist_ok=True)
@@ -32,6 +39,10 @@ ARTWORK_SPECS = {
 }
 
 def validate_and_process_artwork(file_bytes: bytes, filename: str, artwork_type: str):
+    """
+    Validates uploaded artwork against dimension, aspect ratio, and size constraints.
+    Returns (width, height, file_size_kb) tuple upon success.
+    """
     if artwork_type not in ARTWORK_SPECS:
         raise HTTPException(status_code=400, detail="Invalid artwork type.")
     
