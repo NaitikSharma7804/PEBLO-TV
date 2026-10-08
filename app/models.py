@@ -1,9 +1,15 @@
+"""
+SQLAlchemy ORM models defining the Peblo TV schema.
+Includes entities for Shows, Seasons, Episodes, Artworks, and PublishRuns.
+"""
+
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import relationship
 from app.database import Base
 
 class Show(Base):
+    """Represents a top-level media show (series, minisodes, songs, or featured content)."""
     __tablename__ = "shows"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -20,6 +26,7 @@ class Show(Base):
 
 
 class Season(Base):
+    """Represents a season grouping within a show; season 0 is reserved for trailers."""
     __tablename__ = "seasons"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -36,6 +43,7 @@ class Season(Base):
 
 
 class Episode(Base):
+    """Represents an individual episode within a season."""
     __tablename__ = "episodes"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -56,6 +64,7 @@ class Episode(Base):
 
 
 class Artwork(Base):
+    """Represents uploaded artwork metadata attached to a show or episode."""
     __tablename__ = "artworks"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -73,6 +82,7 @@ class Artwork(Base):
 
 
 class PublishRun(Base):
+    """Audit log record of static catalogue publishing events."""
     __tablename__ = "publish_runs"
 
     id = Column(Integer, primary_key=True, index=True)
