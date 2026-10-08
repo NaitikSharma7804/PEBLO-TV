@@ -1,23 +1,22 @@
-from fastapi import FastAPI, Depends, HTTPException, UploadFile, File, Form, status
-from sqlalchemy.orm import Session
-from typing import List, Optional
 import json
 import os
+from typing import Optional
 
-from app.database import engine, SessionLocal, Base
-from app.models import Show, Season, Episode, Artwork, PublishRun
-from app.storage import LocalStorageService, validate_and_process_artwork, ARTWORK_SPECS
+from fastapi import Depends, FastAPI, File, Form, HTTPException, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy.orm import Session
+
 from app.auth import get_current_user_role, require_admin
+from app.database import Base, SessionLocal, engine
+from app.models import Artwork, Episode, PublishRun, Season, Show
+from app.storage import LocalStorageService, validate_and_process_artwork
 
 # Create database tables automatically for local execution/docker
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Peblo TV Mini API", version="1.0")
-from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Peblo TV Mini API", version="1.0")
-
-# --- ADD THIS CORS CONFIGURATION -
+# Enable CORS for frontend integration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins for local testing/development
@@ -25,6 +24,7 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
     allow_headers=["*"],  # Allows all headers (including X-User-Role)
 )
+
 storage = LocalStorageService()
 # Database session dependency
 def get_db():
